@@ -1,4 +1,5 @@
 {
+  "homepage": "https://apollosandoval.github.io/mfe-showroom",
   "name": "mfe-showroom",
   "version": "1.0.0",
   "description": "Showroom with Federated Micro-Frontends",
@@ -6,7 +7,9 @@
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "start": "webpack serve --config webpack.config.js",
-    "build": "webpack build --config webpack.config.js"
+    "build": "webpack build --config webpack.config.js",
+    "predeploy": "npm run build",
+    "deploy": "gh-pages -d build"
   },
   "author": "",
   "license": "ISC",
@@ -19,6 +22,7 @@
     "babel-loader": "^8.2.4",
     "babel-preset-react": "^6.24.1",
     "css-loader": "^6.7.1",
+    "gh-pages": "^3.2.3",
     "html-webpack-plugin": "^5.5.0",
     "mini-css-extract-plugin": "^2.6.0",
     "style-loader": "^3.3.1",
