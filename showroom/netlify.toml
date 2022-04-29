@@ -3,3 +3,5 @@
 base = "showroom"
 # Directory containing deploy-ready HTML files and assets generated as build output.
 publish = "dist"
+# default built command
+command = "npm run build"
