@@ -67,7 +67,7 @@ module.exports = {
       name: 'host',
       filename: 'remoteEntry.js',
       remotes: {
-        "mf-input": "showroom_components@https://master--dainty-klepon-beb108.netlify.app/remoteEntry.js"
+        "mf-input": "showroom_components@https://master--dainty-klepon-beb108.netlify.app/remoteEntry.js",
         "mf-menu": "showroom_components@https://tubular-valkyrie-3afdba.netlify.app/remoteEntry.js"
       },
       exposes: {},
