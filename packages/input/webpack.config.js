@@ -58,7 +58,7 @@ module.exports = {
       filename: 'styles.css'
     }),
     new ModuleFederationPlugin({
-      name: 'showroom_components',
+      name: 'showroom_input',
       filename: 'remoteEntry.js',
       remotes: {},
       exposes: {

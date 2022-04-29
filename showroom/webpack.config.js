@@ -67,8 +67,8 @@ module.exports = {
       name: 'host',
       filename: 'remoteEntry.js',
       remotes: {
-        "mf-input": "showroom_components@https://showroom-input.netlify.app/remoteEntry.js",
-        "mf-menu": "showroom_components@https://showroom-menu.netlify.app/remoteEntry.js"
+        "mf-input": "showroom_input@https://showroom-input.netlify.app/remoteEntry.js",
+        "mf-menu": "showroom_menu@https://showroom-menu.netlify.app/remoteEntry.js"
       },
       exposes: {},
       shared: require('./package.json').dependencies
