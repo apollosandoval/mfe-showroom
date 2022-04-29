@@ -1,5 +1,5 @@
 [build]
 # Sets base directory for starting a build.
-base = "./showroom"
+base = "showroom"
 # Directory containing deploy-ready HTML files and assets generated as build output.
-publish = "./dist"
+publish = "dist"
