@@ -4,8 +4,5 @@
   "workspaces": [
     "./showroom",
     "./packages/*"
-  ],
-  "scripts": {
-    "build": "npm run build --workspaces"
-  }
+  ]
 }
