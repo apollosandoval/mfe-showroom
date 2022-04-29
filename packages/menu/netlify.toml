@@ -1,0 +1,5 @@
+[build]
+# Sets base directory for starting a build.
+base = "./packages/menu"
+# Directory containing deploy-ready HTML files and assets generated as build output.
+publish = "./dist"
