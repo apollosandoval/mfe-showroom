@@ -66,7 +66,9 @@ module.exports = {
     new ModuleFederationPlugin({
       name: 'host',
       filename: 'remoteEntry.js',
-      remotes: {},
+      remotes: {
+        "@carvana/showroom": "showroom_components@https://master--dainty-klepon-beb108.netlify.app/remoteEntry.js"
+      },
       exposes: {},
       shared: require('./package.json').dependencies
     })
