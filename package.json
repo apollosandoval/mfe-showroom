@@ -2,7 +2,7 @@
   "name": "mfe-showroom",
   "version": "1.0.0",
   "workspaces": [
-    "showroom",
-    "packages/*"
+    "./showroom",
+    "./packages/*"
   ]
 }
