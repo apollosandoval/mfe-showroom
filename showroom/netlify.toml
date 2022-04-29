@@ -5,3 +5,11 @@ base = "showroom"
 publish = "dist"
 # default built command
 command = "npm run build"
+
+[[redirects]]
+from = "/menu"
+to = "https://showroom-menu.netlify.app/remoteEntry.js"
+
+[[redirects]]
+from ="/input"
+to = "https://showroom-input.netlify.app/remoteEntry.js"
