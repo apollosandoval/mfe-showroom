@@ -67,9 +67,7 @@ module.exports = {
       name: 'host',
       filename: 'remoteEntry.js',
       remotes: {},
-      exposes: {
-        './App': './src/index.js'
-      },
+      exposes: {},
       shared: require('./package.json').dependencies
     })
   ]
