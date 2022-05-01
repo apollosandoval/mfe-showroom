@@ -44,7 +44,7 @@ const App = () => {
           aria-labelledby="list-heading">
         {
           Array.from(tasks.entries())
-            .map(([name, status], idx) => <Task name={name} completed={status} idx={idx} toggleTaskCompleted={toggleTaskStatus}/>)
+            .map(([name, status], idx) => <Task name={name} completed={status} idx={idx} key={`todo-${idx}`} toggleTaskCompleted={toggleTaskStatus}/>)
         }
       </ul>
     </div>
