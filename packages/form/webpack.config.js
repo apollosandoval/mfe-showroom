@@ -60,7 +60,9 @@ module.exports = {
     new ModuleFederationPlugin({
       name: 'showroom_form',
       filename: 'remoteEntry.js',
-      remotes: {},
+      remotes: {
+        '@carvana/showroom': 'host@https://mfe-showroom-hackathon.netlify.app/remoteEntry.js'
+      },
       exposes: {
         './Form': './lib/index.js'
       },
