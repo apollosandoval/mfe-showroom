@@ -1,9 +1,10 @@
 const path = require('path');
+const HtmlWebPackPlugin = require('html-webpack-plugin');
 const MiniCssExtractPlugin = require('mini-css-extract-plugin');
 const { ModuleFederationPlugin } = require('webpack').container;
 
 module.exports = {
-  entry: './lib/index.js',
+  entry: './src/index.js',
   mode: 'development',
   resolve: { extensions: ['*', '.js', '.jsx'] },
   output: {
@@ -12,9 +13,9 @@ module.exports = {
   devServer: {
     static: {
       directory: path.join(__dirname, 'public/'),
-      publicPath: 'http://localhost:3000/',
+      publicPath: 'http://localhost:3002/',
     },
-    port: 3000,
+    port: 3002,
     hot: true
   },
   module: {
@@ -54,6 +55,11 @@ module.exports = {
     ]
   },
   plugins: [
+    new HtmlWebPackPlugin({
+      title: 'Showroom Form',
+      filename: './index.html',
+      template: './public/index.html',
+    }),
     new MiniCssExtractPlugin({
       filename: 'styles.css'
     }),
@@ -64,7 +70,7 @@ module.exports = {
         '@carvana/showroom': 'host@https://mfe-showroom-hackathon.netlify.app/remoteEntry.js'
       },
       exposes: {
-        './Form': './lib/index.js'
+        './Form': './src/index.js'
       },
       shared: require('./package.json').dependencies
     })

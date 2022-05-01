@@ -12,9 +12,9 @@ module.exports = {
   devServer: {
     static: {
       directory: path.join(__dirname, 'public/'),
-      publicPath: 'http://localhost:3000/',
+      publicPath: 'http://localhost:3003/',
     },
-    port: 3000,
+    port: 3003,
     hot: true
   },
   module: {
@@ -60,7 +60,6 @@ module.exports = {
     new ModuleFederationPlugin({
       name: 'showroom_input',
       filename: 'remoteEntry.js',
-      remotes: {},
       exposes: {
         './Input': './lib/index.js'
       },

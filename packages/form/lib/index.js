@@ -12,7 +12,7 @@ const styles = {
   'btn__lg': css``,
 };
 
-export default ({className, addTask }) => {
+const Form = ({className, addTask }) => {
   const [name, setName] = useState('');
 
   const handleSubmit = (e) => {
@@ -37,3 +37,5 @@ export default ({className, addTask }) => {
     </form>
   )
 };
+
+export default Form;

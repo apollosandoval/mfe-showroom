@@ -3,5 +3,7 @@ import {css, cx} from "@linaria/core";
 
 const styles = css``;
 
-export default ({ children, className, ...props }) =>
-    <button type="button" className={cx(styles, className)} {...props}>{ children }</button>;
+const Button = ({children, className, ...props}) =>
+  <button type="button" className={cx(styles, className)} {...props}>{children}</button>;
+
+export default Button;
