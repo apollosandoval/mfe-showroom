@@ -1,10 +1,9 @@
 const path = require('path');
-const HtmlWebPackPlugin = require('html-webpack-plugin');
 const MiniCssExtractPlugin = require('mini-css-extract-plugin');
 const { ModuleFederationPlugin } = require('webpack').container;
 
 module.exports = {
-  entry: './src/index.js',
+  entry: './lib/index.js',
   mode: 'development',
   resolve: { extensions: ['*', '.js', '.jsx'] },
   output: {
@@ -55,25 +54,15 @@ module.exports = {
     ]
   },
   plugins: [
-    new HtmlWebPackPlugin({
-      title: 'Showroom MFE',
-      filename: './index.html',
-      template: './public/index.html',
-    }),
     new MiniCssExtractPlugin({
       filename: 'styles.css'
     }),
     new ModuleFederationPlugin({
-      name: 'host',
+      name: 'showroom_button',
       filename: 'remoteEntry.js',
-      remotes: {
-        "mf-input": "showroom_input@https://showroom-input.netlify.app/remoteEntry.js",
-        "mf-button": "showroom_button@https://showroom-button.netlify.app/remoteEntry.js",
-        "mf-form": "showroom_form@https://showroom-form.netlify.app/remoteEntry.js",
-        "@carvana/showroom": "host@https://mfe-showroom-hackathon.netlify.app/remoteEntry.js"
-      },
+      remotes: {},
       exposes: {
-        './components': './lib/index.js'
+        './Button': './lib/index.js'
       },
       shared: require('./package.json').dependencies
     })

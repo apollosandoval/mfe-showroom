@@ -1,7 +1,7 @@
 {
-  "name": "menu",
+  "name": "form",
   "version": "1.0.0",
-  "description": "Showroom Menu Component",
+  "description": "Showroom Form Component",
   "main": "index.js",
   "author": "oscar.sandovalreynoso@carvana.com",
   "license": "UNLICENSED",

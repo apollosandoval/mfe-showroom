@@ -1,6 +1,6 @@
 [build]
 # Sets base directory for starting a build.
-base = "packages/menu"
+base = "packages/button"
 # Directory containing deploy-ready HTML files and assets generated as build output.
 publish = "dist"
 # default built command

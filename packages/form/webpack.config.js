@@ -58,11 +58,11 @@ module.exports = {
       filename: 'styles.css'
     }),
     new ModuleFederationPlugin({
-      name: 'showroom_menu',
+      name: 'showroom_form',
       filename: 'remoteEntry.js',
       remotes: {},
       exposes: {
-        './Menu': './lib/index.js'
+        './Form': './lib/index.js'
       },
       shared: require('./package.json').dependencies
     })

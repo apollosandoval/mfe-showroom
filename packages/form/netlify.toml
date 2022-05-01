@@ -1,0 +1,7 @@
+[build]
+# Sets base directory for starting a build.
+base = "packages/form"
+# Directory containing deploy-ready HTML files and assets generated as build output.
+publish = "dist"
+# default built command
+command = "npm run build"

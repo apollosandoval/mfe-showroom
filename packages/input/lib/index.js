@@ -1,9 +1,7 @@
 import React from 'react';
+import {css, cx} from "@linaria/core";
 
-const Input = (props) => {
-  return (
-    <input placeholder="showroom input" />
-  )
-};
+const styles = css``;
 
-export default Input;
+export default ({ className, ...props }) =>
+    <input className={cx(styles, className)} placeholder="showroom input" {...props} />
