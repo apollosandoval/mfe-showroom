@@ -5,3 +5,7 @@ base = "packages/input"
 publish = "dist"
 # default built command
 command = "npm run build"
+
+[[redirects]]
+from ="/"
+to = "https://showroom-input.netlify.app/remoteEntry.js"

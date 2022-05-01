@@ -5,3 +5,7 @@ base = "packages/form"
 publish = "dist"
 # default built command
 command = "npm run build"
+
+[[redirects]]
+from ="/"
+to = "https://showroom-form.netlify.app/remoteEntry.js"
