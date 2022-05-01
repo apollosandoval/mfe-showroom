@@ -3,6 +3,7 @@ const HtmlWebPackPlugin = require('html-webpack-plugin');
 const MiniCssExtractPlugin = require('mini-css-extract-plugin');
 const { ModuleFederationPlugin } = require('webpack').container;
 
+
 module.exports = {
   entry: './src/index.js',
   mode: 'development',
@@ -70,7 +71,8 @@ module.exports = {
         "mf-input": "showroom_input@https://showroom-input.netlify.app/remoteEntry.js",
         "mf-button": "showroom_button@https://showroom-button.netlify.app/remoteEntry.js",
         "mf-form": "showroom_form@https://showroom-form.netlify.app/remoteEntry.js",
-        "@carvana/showroom": "host@https://mfe-showroom-hackathon.netlify.app/remoteEntry.js"
+        // "@carvana/showroom": "host@https://mfe-showroom-hackathon.netlify.app/remoteEntry.js"
+        "@carvana/showroom": "host@http://localhost:3000/remoteEntry.js"
       },
       exposes: {
         './components': './lib/index.js'

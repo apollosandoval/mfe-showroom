@@ -1,8 +1,9 @@
 import React, {useState} from "react";
-import ReactDOM from "react-dom";
+import { createRoot } from "react-dom/client";
 import {css, cx} from '@linaria/core';
 
 import {Form} from '@carvana/showroom/components';
+// import Form from 'mf-form/Form';
 import Task from "./components/Task";
 import FilterButton from "./components/FilterButton";
 
@@ -33,7 +34,7 @@ const App = () => {
   return (
     <div className={cx(styles.todoapp, styles['stack-large'])}>
       <h1>TodoMatic</h1>
-      <Form/>
+      {/*<Form addTask={addTask}/>*/}
       <div>
         <FilterButton/>
         <FilterButton/>
@@ -44,11 +45,11 @@ const App = () => {
           aria-labelledby="list-heading">
         {
           Array.from(tasks.entries())
-            .map(([name, status], idx) => <Task name={name} completed={status} idx={idx} key={`todo-${idx}`} toggleTaskCompleted={toggleTaskStatus}/>)
+            .map((t, idx) => <Task name={t[0]} completed={t[1]} idx={idx} key={`todo-${idx}`} toggleTaskCompleted={toggleTaskStatus}/>)
         }
       </ul>
     </div>
   );
 };
 
-ReactDOM.render(<App/>, document.getElementById('app'));
+createRoot(document.getElementById('app')).render(<App />);

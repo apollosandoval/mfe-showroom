@@ -70,7 +70,7 @@ module.exports = {
         '@carvana/showroom': 'host@https://mfe-showroom-hackathon.netlify.app/remoteEntry.js'
       },
       exposes: {
-        './Form': './src/index.js'
+        './Form': './lib/index.js'
       },
       shared: require('./package.json').dependencies
     })

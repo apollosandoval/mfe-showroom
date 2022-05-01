@@ -11,7 +11,7 @@ const styles = {
   'btn__danger': css``,
 };
 
-export default ({ name, idx, completed, toggleTaskCompleted }) => {
+const Task = ({ name, idx, completed, toggleTaskCompleted }) => {
   return (
     <li className={cx(styles.todo, styles["stack-small"])}>
       <div className={styles["c-cb"]}>
@@ -25,3 +25,5 @@ export default ({ name, idx, completed, toggleTaskCompleted }) => {
     </li>
   );
 };
+
+export default Task;

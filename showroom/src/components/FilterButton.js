@@ -7,7 +7,7 @@ const styles = {
   'toggle-btn': css``
 };
 
-export default (props) => {
+const FilterButton = (props) => {
   return (
     <Button type="button" className={cx(styles['toggle-btn'])}>
       <span>Show </span>
@@ -16,3 +16,5 @@ export default (props) => {
     </Button>
   )
 };
+
+export default FilterButton;
