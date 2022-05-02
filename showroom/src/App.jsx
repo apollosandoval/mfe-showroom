@@ -1,9 +1,9 @@
 import React, {useState} from "react";
-import { createRoot } from "react-dom/client";
+import ReactDOM from "react-dom";
 import {css, cx} from '@linaria/core';
 
-import {Form} from '@carvana/showroom/components';
-// import Form from 'mf-form/Form';
+import {Button, Input} from '@carvana/showroom/components';
+import Form from 'mf-form/Form';
 import Task from "./components/Task";
 import FilterButton from "./components/FilterButton";
 
@@ -34,7 +34,12 @@ const App = () => {
   return (
     <div className={cx(styles.todoapp, styles['stack-large'])}>
       <h1>TodoMatic</h1>
-      {/*<Form addTask={addTask}/>*/}
+      <div>
+        <p>Container for MF Components</p>
+        <Form addTask={addTask}/>
+        <Input />
+        <Button>worked</Button>
+      </div>
       <div>
         <FilterButton/>
         <FilterButton/>
@@ -52,4 +57,4 @@ const App = () => {
   );
 };
 
-createRoot(document.getElementById('app')).render(<App />);
+ReactDOM.render(<App />, document.getElementById('app'));

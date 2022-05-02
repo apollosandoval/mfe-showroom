@@ -1,9 +1,9 @@
 import React from 'react';
-import { createRoot } from "react-dom/client";
+import ReactDOM from 'react-dom';
 
-import Form from '../lib/index'
+import Form from 'mf-form/Form';
 
 const App = () => <Form />;
 
-createRoot(document.getElementById(('form-app'))).render(<App />);
+ReactDOM.render(<App />, document.getElementById('form-app'));
 
