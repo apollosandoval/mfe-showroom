@@ -6,8 +6,8 @@ const { ModuleFederationPlugin } = require('webpack').container;
 const dependencies = require('./package.json').dependencies;
 const shared = {
   ...dependencies,
-  react: {singleton: true, version: dependencies.react},
-  'react-dom': {singleton: true, version: dependencies["react-dom"]},
+  react: {singleton: true, eager: true, requiredVersion: dependencies.react},
+  'react-dom': {singleton: true, eager: true, requiredVersion: dependencies["react-dom"]},
 };
 
 module.exports = {
@@ -75,9 +75,7 @@ module.exports = {
       filename: 'remoteEntry.js',
       remotes: {
         '@carvana/showroom': 'host@https://mfe-showroom-hackathon.netlify.app/remoteEntry.js',
-        'mf-button': 'showroom_button@https://showroom-button.netlify.app/remoteEntry.js',
         'mf-form': 'showroom_form@https://showroom-form.netlify.app/remoteEntry.js',
-        'mf-input': 'showroom_input@https://showroom-input.netlify.app/remoteEntry.js',
 
         // '@carvana/showroom': 'host@http://localhost:3000/remoteEntry.js',
         // 'mf-button': 'showroom_button@http://localhost:3001/remoteEntry.js',
@@ -88,7 +86,6 @@ module.exports = {
         './Form': './lib/index.js'
       },
       shared: require('./package.json').dependencies
-      // shared
     })
   ]
 };

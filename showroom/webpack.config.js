@@ -6,8 +6,8 @@ const {ModuleFederationPlugin} = require('webpack').container;
 const dependencies = require('./package.json').dependencies;
 const shared = {
   ...dependencies,
-  react: {singleton: true, version: dependencies.react},
-  'react-dom': {singleton: true, version: dependencies["react-dom"]},
+  react: {singleton: true, requiredVersion: dependencies.react},
+  'react-dom': {singleton: true, requiredVersion: dependencies["react-dom"]},
 };
 
 module.exports = {
