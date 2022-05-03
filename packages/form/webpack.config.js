@@ -74,13 +74,13 @@ module.exports = {
       name: 'showroom_form',
       filename: 'remoteEntry.js',
       remotes: {
-        // '@carvana/showroom': 'host@https://mfe-showroom-hackathon.netlify.app/remoteEntry.js',
-        // 'mf-form': 'showroom_form@https://showroom-form.netlify.app/remoteEntry.js',
+        '@carvana/showroom': 'host@https://mfe-showroom-hackathon.netlify.app/remoteEntry.js',
+        'mf-form': 'showroom_form@https://showroom-form.netlify.app/remoteEntry.js',
 
-        '@carvana/showroom': 'host@http://localhost:3000/remoteEntry.js',
-        'mf-button': 'showroom_button@http://localhost:3001/remoteEntry.js',
-        'mf-form': 'showroom_form@http://localhost:3002/remoteEntry.js',
-        'mf-input': 'showroom_input@http://localhost:3003/remoteEntry.js',
+        // '@carvana/showroom': 'host@http://localhost:3000/remoteEntry.js',
+        // 'mf-button': 'showroom_button@http://localhost:3001/remoteEntry.js',
+        // 'mf-form': 'showroom_form@http://localhost:3002/remoteEntry.js',
+        // 'mf-input': 'showroom_input@http://localhost:3003/remoteEntry.js',
       },
       exposes: {
         './Form': './lib/index.js'
