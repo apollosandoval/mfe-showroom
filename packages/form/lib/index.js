@@ -12,7 +12,7 @@ const styles = {
   'btn__lg': css``,
 };
 
-const Form = ({className, addTask }) => {
+const Form = ({className, addTask}) => {
   const [name, setName] = useState('');
 
   const handleSubmit = (e) => {

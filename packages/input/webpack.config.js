@@ -1,9 +1,17 @@
 const path = require('path');
+const HtmlWebPackPlugin = require('html-webpack-plugin');
 const MiniCssExtractPlugin = require('mini-css-extract-plugin');
 const { ModuleFederationPlugin } = require('webpack').container;
 
+const dependencies = require('./package.json').dependencies;
+const shared = {
+  ...dependencies,
+  react: {singleton: true},
+  'react-dom': {singleton: true},
+};
+
 module.exports = {
-  entry: './lib/index.js',
+  entry: './src/index.js',
   mode: 'development',
   resolve: { extensions: ['*', '.js', '.jsx'] },
   output: {
@@ -54,6 +62,11 @@ module.exports = {
     ]
   },
   plugins: [
+    new HtmlWebPackPlugin({
+      title: 'Showroom Input',
+      filename: './index.html',
+      template: './public/index.html',
+    }),
     new MiniCssExtractPlugin({
       filename: 'styles.css'
     }),
@@ -63,7 +76,7 @@ module.exports = {
       exposes: {
         './Input': './lib/index.js'
       },
-      shared: require('./package.json').dependencies
+      shared
     })
   ]
 };

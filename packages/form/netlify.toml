@@ -6,6 +6,3 @@ publish = "dist"
 # default built command
 command = "npm run build"
 
-[[redirects]]
-from ="/"
-to = "/remoteEntry.js"

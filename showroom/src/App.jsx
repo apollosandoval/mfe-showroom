@@ -1,5 +1,4 @@
 import React, {useState} from "react";
-import ReactDOM from "react-dom";
 import {css, cx} from '@linaria/core';
 
 import {Button, Input} from '@carvana/showroom/components';
@@ -57,4 +56,4 @@ const App = () => {
   );
 };
 
-ReactDOM.render(<App />, document.getElementById('app'));
+export default App;

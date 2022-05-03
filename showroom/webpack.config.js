@@ -74,21 +74,20 @@ module.exports = {
       name: 'host',
       filename: 'remoteEntry.js',
       remotes: {
-        "@carvana/showroom": "host@https://mfe-showroom-hackathon.netlify.app/remoteEntry.js",
-        "mf-button": "showroom_button@https://showroom-button.netlify.app/remoteEntry.js",
-        "mf-form": "showroom_form@https://showroom-form.netlify.app/remoteEntry.js",
-        "mf-input": "showroom_input@https://showroom-input.netlify.app/remoteEntry.js",
+        // "@carvana/showroom": "host@https://mfe-showroom-hackathon.netlify.app/remoteEntry.js",
+        // "mf-button": "showroom_button@https://showroom-button.netlify.app/remoteEntry.js",
+        // "mf-form": "showroom_form@https://showroom-form.netlify.app/remoteEntry.js",
+        // "mf-input": "showroom_input@https://showroom-input.netlify.app/remoteEntry.js",
 
-        // "@carvana/showroom": "host@http://localhost:3000/remoteEntry.js",
-        // "mf-button": "showroom_button@http://localhost:3001/remoteEntry.js",
-        // 'mf-form': 'showroom_form@http://localhost:3002/remoteEntry.js',
-        // "mf-input": "showroom_input@http://localhost:3003/remoteEntry.js",
+        "@carvana/showroom": "host@http://localhost:3000/remoteEntry.js",
+        "mf-button": "showroom_button@http://localhost:3001/remoteEntry.js",
+        'mf-form': 'showroom_form@http://localhost:3002/remoteEntry.js',
+        "mf-input": "showroom_input@http://localhost:3003/remoteEntry.js",
       },
       exposes: {
         './components': './lib/index.js'
       },
-      shared: require('./package.json').dependencies
-      // shared
+      shared
     })
   ]
 };
